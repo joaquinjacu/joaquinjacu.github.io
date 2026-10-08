@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joaquín Jacubowicz</title>
+<meta name="description" content="Musician and producer from Buenos Aires. Music software and games about AI safety.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+:root {
+  --bg: #FBFAF7;
+  --ink: #1F1E1C;
+  --muted: #7A766F;
+  --line: #E4E1DA;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #161615; --ink: #E8E6E1; --muted: #8E8A83; --line: #2C2B28; }
+}
+:root[data-theme="dark"] { --bg: #161615; --ink: #E8E6E1; --muted: #8E8A83; --line: #2C2B28; }
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 19px/1.55 Newsreader, Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 640px; margin: 0 auto; padding: 80px 24px 96px; }
+@media (max-width: 480px) { main { padding: 48px 16px 64px; } body { font-size: 18px; } }
+
+a { color: inherit; text-decoration-color: var(--muted); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-color: var(--ink); }
+
+h1 { font-size: 1.5rem; font-weight: 500; margin: 0 0 20px; }
+p { margin: 0 0 14px; }
+.links { color: var(--muted); }
+.links a { color: var(--ink); }
+
+h2 {
+  font-size: 0.8rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); margin: 56px 0 4px;
+}
+ul { list-style: none; margin: 0; padding: 0; }
+li { display: grid; grid-template-columns: 6.2em minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+li:last-child { border-bottom: 0; }
+.date { color: var(--muted); font-size: .9em; padding-top: .1em; white-space: nowrap; }
+.title { font-weight: 500; }
+.desc { display: block; margin-top: 2px; }
+.more { display: block; margin-top: 4px; color: var(--muted); font-size: .9em; }
+.more a { color: var(--muted); }
+.more a:hover { color: var(--ink); }
+@media (max-width: 480px) { li { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Joaquín Jacubowicz</h1>
+  <p>Musician and producer from Buenos Aires. I build my own music software, and lately, games about AI safety. Most of it I build by directing AI coding agents (Claude Code).</p>
+  <p class="links"><a href="mailto:joaquinjacubowicz@gmail.com">joaquinjacubowicz@gmail.com</a> · <a href="https://github.com/heiofdvk">GitHub</a></p>
+
+  <h2>AI safety</h2>
+  <ul>
+    <li>
+      <span class="date">Sep 2026</span>
+      <span>
+        <span class="title">Albert: a game about reward hacking</span>
+        <span class="desc">You play an AI model in training that can only survive by gaming what its score measures. Each level is based on a documented case of specification gaming. Made with Julián Szereszewski and Nicolás Waehner for Mangrove's Game Night hackathon.</span>
+        <span class="more"><a href="https://heiofdvk.github.io/reward-hacking-game/">play</a> · <a href="https://github.com/heiofdvk/reward-hacking-game">code</a></span>
+      </span>
+    </li>
+  </ul>
+
+  <h2>Music software</h2>
+  <ul>
+    <li>
+      <span class="date">Aug 2026</span>
+      <span>
+        <span class="title">Pink Trombone plugin</span>
+        <span class="desc">A synth that imitates the human voice by simulating air moving through a vocal tract. An unofficial plugin based on Neil Thapen's <a href="https://dood.al/pinktrombone/">Pink Trombone</a>.</span>
+        <span class="more"><a href="https://github.com/heiofdvk/pink-trombone-plugin">code</a></span>
+      </span>
+    </li>
+    <li>
+      <span class="date">Aug 2026</span>
+      <span>
+        <span class="title">Violin synth</span>
+        <span class="desc">A violin built from the physics of bowing rather than from samples. The string model is fitted to 91 notes measured from a solo violin recording, and adds a shared violin body, sympathetic open strings and expressive vibrato. VST3/AU plugin.</span>
+      </span>
+    </li>
+    <li>
+      <span class="date">Oct 2026</span>
+      <span>
+        <span class="title">transcribe-midi</span>
+        <span class="desc">Turns a link or audio file into MIDI. It separates the instruments first, then transcribes each one with the model that suits it.</span>
+        <span class="more"><a href="https://github.com/heiofdvk/transcribe-midi">code</a></span>
+      </span>
+    </li>
+    <li>
+      <span class="date">Oct 2026</span>
+      <span>
+        <span class="title">Sample organizer</span>
+        <span class="desc">Classifies a sample library by sound (kick, snare, loop…), measures BPM and key, and finds similar sounds with CLAP audio embeddings. Tested on about 27,500 files.</span>
+        <span class="more">in development</span>
+      </span>
+    </li>
+    <li>
+      <span class="date">Oct 2026</span>
+      <span>
+        <span class="title">multitrack-stems</span>
+        <span class="desc">Splits a finished song into 13 stems that sum back to the original mix, by chaining five source-separation models.</span>
+        <span class="more"><a href="https://github.com/heiofdvk/multitrack-stems">code</a></span>
+      </span>
+    </li>
+    <li>
+      <span class="date">Sep 2026</span>
+      <span>
+        <span class="title">HandCC</span>
+        <span class="desc">Webcam hand tracking as a MIDI controller for Ableton Live.</span>
+        <span class="more"><a href="https://github.com/heiofdvk/handcc">code</a></span>
+      </span>
+    </li>
+    <li>
+      <span class="date">Aug 2026</span>
+      <span>
+        <span class="title">Voice Splitter</span>
+        <span class="desc">An Ableton device that splits a MIDI clip into one track per voice.</span>
+        <span class="more"><a href="https://github.com/heiofdvk/voice-splitter">code</a></span>
+      </span>
+    </li>
+  </ul>
+
+  <h2>Other</h2>
+  <ul>
+    <li>
+      <span class="date">Sep 2026</span>
+      <span>
+        <span class="title">Palabrero 16</span>
+        <span class="desc">Sixteen Wordle boards at once, in Spanish.</span>
+        <span class="more"><a href="https://heiofdvk.github.io/palabrero16/">play</a></span>
+      </span>
+    </li>
+  </ul>
+</main>
+</body>
+</html>
